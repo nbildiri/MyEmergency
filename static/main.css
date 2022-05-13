@@ -1,0 +1,50 @@
+#logo_img {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+#call_me_btn{
+    display: inline-block;
+    width: calc(20% - 2px);
+    color: red;
+    margin: auto calc(2%) auto calc(31% - 2px);
+    font-size: large;
+    padding: 5px;
+}
+#txt_me_btn {
+    width: calc( 20% - 2px);
+    margin: 0 auto;
+    color: red;
+    font-size: large;
+    padding: 5px;
+}
+
+#buttons{
+    width: auto;
+}
+
+#phone_num_input{
+    display: block;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    font-size: larger;
+}
+
+#input_num {
+    display: block;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    font-size: larger;
+}
+
+#success_div {
+    display: block;
+    width: auto;
+    margin: 20px;
+    color: red;
+    font-size: large;
+    text-align: center;
+    font-family: sans-serif;
+}

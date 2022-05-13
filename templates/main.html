@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="../static/main.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>MyEmergency</title>
+</head>
+<body>
+
+
+
+<img id= "logo_img" src="../static/logo.png" alt="Logo">
+<div id="success_div"></div>
+<label for="phone_num_input"></label><input type="tel" pattern="[+]{1}[0-9]{11,14}" id = phone_num_input placeholder = "Enter Phone Number">
+
+<br>
+<div id="buttons">
+<button id="call_me_btn" onclick="callMeBtn()">CALL ME NOW</button>
+<button id="txt_me_btn" onclick="textMeBtn()">TEXT ME NOW</button>
+</div>
+</body>
+</html>
+
+
+<script src="/static/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    function callMeBtn() {
+
+        pn = $("#phone_num_input").val();
+
+        $.get("/notifyCall?phone_number=" + pn, function (data) {
+            json_obj = JSON.parse(data);
+            if (json_obj['success'] === true)
+            {
+                alert(" Congratulations! Your call to " + pn + " was successful.")
+                document.getElementById("logo_img").src="../static/saved_you.jpeg";
+                $("#success_div").html("Congratulations! Your call to " + pn + " was successful. " + "<br>" + "Would you like to try again? Input number in box below:" + "<br>" );
+
+            }
+        });
+    }
+
+    function textMeBtn() {
+
+        pn = $("#phone_num_input").val();
+
+        $.get("/notifyText?phone_number=" + pn, function (data) {
+            json_obj = JSON.parse(data);
+            if (json_obj['success'] === true) {
+                alert(" Congratulations! Your text to " + pn + " was successful.")
+                document.getElementById("logo_img").src = "../static/saved_you.jpeg";
+                $("#success_div").html("Congratulations! Your text to " + pn + " was successful. " + "<br>" + "Would you like to try again? Input number in box below:" + "<br>");
+
+            }
+        });
+    }
+</script>
