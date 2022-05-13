@@ -1,5 +1,5 @@
 # MyEmergency
-Web Application
+Web Application | Using Python, Flask, JavaScript and MySQL
 
 Ever get stuck in an annoying meeting and wish someone would call or text you to get out of it? 
 
