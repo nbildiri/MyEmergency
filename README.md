@@ -2,6 +2,9 @@
 Web Application
 
 Ever get stuck in an annoying meeting and wish someone would call or text you to get out of it? 
+
+We have that *ALL* the time!
+
 Thats why we created **MY EMERGENCY**
 
 <img width="837" alt="MyEmergency_WebsiteImage" src="https://user-images.githubusercontent.com/58539188/168213434-670ba0f3-241b-47c7-9cf0-b304b5186456.png">
